@@ -27,7 +27,7 @@ public class EntityTest {
 //		config.addAnnotatedClass(Employee.class);
 //		config.configure("hibernate.cfg.xml");
 //		
-////		new SchemaExport(config).create(true,true);
+//		new SchemaExport(config).create(true,true);
 //		
 //		SessionFactory factory = config.buildSessionFactory();
 //		Session session = factory.getCurrentSession();
@@ -37,7 +37,7 @@ public class EntityTest {
 //		Employee alex = new Employee();
 //		alex.setEmpId(100);
 //		alex.setEmpName("Alex Berry");
-//		
+//		alex.setEmpEmailAddress("aaaa");
 //		session.save(alex);
 //		
 //		session.getTransaction().commit();
@@ -53,7 +53,7 @@ public class EntityTest {
 		
 		//db 접속후 여러개의 테이블을 자동으로 제너레이트 해주는 객체.
 		//<property name="hibernate.default_schema">TESTSCHEMA</property> 이구문역시 마찬가지임.
-		new SchemaExport(config).create(true,true);
+//		new SchemaExport(config).create(true,true);
 		
 		//아래 두개의 구문은 객체를 트랜잭션을 컨트롤. 
 		SessionFactory factory = config.buildSessionFactory();
@@ -62,7 +62,7 @@ public class EntityTest {
 		session.beginTransaction();
 		
 		Employee alex = new Employee();
-//		alex.setEmpId(2);
+		alex.setEmpId(2);
 		alex.setEmpName("Alex Berry11");
 		alex.setEmpEmailAddress("alex@hibernate.com");
 		alex.setEmpPassword("alexpass");

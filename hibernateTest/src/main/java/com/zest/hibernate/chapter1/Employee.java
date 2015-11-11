@@ -33,6 +33,7 @@ public class Employee {
 	@TableGenerator(name = "empid", table = "emppktb", pkColumnName = "empkey"
 	, pkColumnValue = "empvalue", allocationSize=1)
 	@GeneratedValue(strategy = GenerationType.TABLE, generator = "empid")
+//	@GeneratedValue
 	private int empId;
 	private String empName;
 
