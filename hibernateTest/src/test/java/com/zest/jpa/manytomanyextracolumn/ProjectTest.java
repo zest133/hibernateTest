@@ -30,20 +30,20 @@ public class ProjectTest {
 		projectRepository.save(project);
 	}
 	
-//	@Test
-//	public void projectMakeEx(){
-//		Person person = new Person("gno2222222", "gnogun@naver.com", "gno");
-//		Project project = new Project("project122222", "description");
-//		
-//		Group group = new Group(person, project, "owner");
-//		
-//		
-//		project.getGroups().add(group);
-//		
-//		personRepository.save(person);
-//		
-//		projectRepository.save(project);
-//		
-//		
-//	}
+	@Test
+	public void projectMakeEx(){
+		Person person = new Person("gno2222222", "gnogun@naver.com", "gno");
+		Project project = new Project("project122222", "description");
+		
+		Group group = new Group(person, project, "owner");
+		
+		
+		project.getGroups().add(group);
+		
+		personRepository.save(person);
+		
+		projectRepository.save(project);
+		
+		
+	}
 }
