@@ -5,8 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="s1")
 public class Student {
 
 	@Id
@@ -16,7 +18,7 @@ public class Student {
 	
 	@ManyToOne
 	@JoinColumn(name="college_id")
-	private College college1;
+	private College college;
 	
 	public int getStudentId() {
 		return studentId;
@@ -31,10 +33,10 @@ public class Student {
 		this.studentName = studentName;
 	}
 	public College getCollege() {
-		return college1;
+		return college;
 	}
-	public void setCollege(College college1) {
-		this.college1 = college1;
+	public void setCollege(College college) {
+		this.college = college;
 	}
 	
 	

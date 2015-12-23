@@ -13,7 +13,7 @@ public class Accounts {
 	
 	@Id
 	//만약 변수에 annotaion을 할꺼면 private는 안된다. 다른 객체이므로. getxxx 에 annotaion을 붙이면 된다. 
-	CompoundKey compoundKey;
+	private CompoundKey compoundKey;
 	private int accountBalance;
 	
 	

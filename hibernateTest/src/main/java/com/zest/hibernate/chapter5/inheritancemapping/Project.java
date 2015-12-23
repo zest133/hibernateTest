@@ -13,10 +13,10 @@ import javax.persistence.InheritanceType;
 
 //각 class마다 table이 생성되며, 하위 class들은 pk키를 기준으로 테이블이 생성된다. 
 //또, 최상위 클래스는 pk와 하위 컬럼만 존재한다. 
-//@Inheritance(strategy=InheritanceType.JOINED)
+@Inheritance(strategy=InheritanceType.JOINED)
 
 //class에 맞는 컬럼 값만 저장하며, pk는 최상위 클래스 값으로 중복되지 않은 값으로 저장된다. 
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+//@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public class Project {
 
 	@Id
