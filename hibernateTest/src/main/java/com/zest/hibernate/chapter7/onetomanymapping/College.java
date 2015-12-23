@@ -17,7 +17,7 @@ public class College {
 	private int collegeId;
 	private String collegeName;
 	
-	@OneToMany(targetEntity=Student.class, mappedBy="college"
+	@OneToMany(targetEntity=Student.class, mappedBy="college1"
 			,cascade= CascadeType.ALL,fetch=FetchType.EAGER)
 	private List<Student> students ;
 	

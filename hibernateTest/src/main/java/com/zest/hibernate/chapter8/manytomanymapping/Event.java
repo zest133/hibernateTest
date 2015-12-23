@@ -37,7 +37,9 @@ public class Event {
 	}
 
 	@ManyToMany
-	@JoinTable(name = "JOIN_DELEGATE_EVENT", joinColumns = { @JoinColumn(name = "eventId") }, inverseJoinColumns = { @JoinColumn(name = "delegateId") })
+	@JoinTable(name = "JOIN_DELEGATE_EVENT", 
+	joinColumns = { @JoinColumn(name = "eventId") }, 
+	inverseJoinColumns = { @JoinColumn(name = "delegateId") })
 	public List<Delegate> getDelegates() {
 		return delegates;
 	}

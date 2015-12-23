@@ -16,7 +16,7 @@ public class Student {
 	
 	@ManyToOne
 	@JoinColumn(name="college_id")
-	private College college;
+	private College college1;
 	
 	public int getStudentId() {
 		return studentId;
@@ -31,10 +31,10 @@ public class Student {
 		this.studentName = studentName;
 	}
 	public College getCollege() {
-		return college;
+		return college1;
 	}
-	public void setCollege(College college) {
-		this.college = college;
+	public void setCollege(College college1) {
+		this.college1 = college1;
 	}
 	
 	

@@ -39,7 +39,9 @@ public class Delegate {
 
 	// 결과를 담을 테이블명을 정의 .
 	@ManyToMany
-	@JoinTable(name = "JOIN_DELEGATE_EVENT", joinColumns = { @JoinColumn(name = "delegateId") }, inverseJoinColumns = { @JoinColumn(name = "eventId") }	)
+	@JoinTable(name = "JOIN_DELEGATE_EVENT", 
+	joinColumns = { @JoinColumn(name = "delegateId") }, 
+	inverseJoinColumns = { @JoinColumn(name = "eventId") }	)
 	public List<Event> getEvents() {
 		return events;
 	}
